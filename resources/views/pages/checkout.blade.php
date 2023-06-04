@@ -2311,7 +2311,7 @@
                                             </td>
                                             <td>
                                                 <h4 class="text-brand">
-                                                    € {{ priceView($details['quantity'] * $details['price'])}}</h4>
+                                                ₸ {{ priceView($details['quantity'] * $details['price'])}}</h4>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -2329,7 +2329,7 @@
                             </div>
                             <div class="col-lg-6 text-right">
                                 <h4>
-                                    € {{ priceView( $newTotal) }}</h4>
+                                ₸ {{ priceView( $newTotal) }}</h4>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 <div class="container mb-30">
     <div class="row flex-row">
         <div class="col-lg-1-5 primary-sidebar sticky-sidebar">
-            <div class="sidebar-widget-2 widget_search mb-50" style="z-index: 9999 !important;">
+            <!-- <div class="sidebar-widget-2 widget_search mb-50" style="z-index: 9999 !important;">
                 <div class="search-form">
                     <form>
                         <input
@@ -16,20 +16,20 @@
                         <button disabled><i class="fi-rs-search"></i></button>
                     </form>
                 </div>
-            </div>
+            </div> -->
             <div class="sidebar-widget widget-category-2 mb-30">
-                <h5 class="section-title style-1 mb-30" style="margin-top:10px !important;">Filtra per prezzo</h5>
+                <h5 class="section-title style-1 mb-30" style="margin-top:10px !important;">Filter by price</h5>
                 <div class="price-filter mb-5">
                     <div class="price-filter-inner">
                         <div id="slider" class="noUiSlider mb-20" wire:ignore></div>
                         <div class="d-flex justify-content-between">
-                            <div class="caption">DA: <strong class="text-brand">€ {{price($this->min)}}</strong>
+                            <div class="caption">From: <strong class="text-brand">₸ {{price($this->min)}}</strong>
                             </div>
-                            <div class="caption">A: <strong class="text-brand">€ {{price($this->max)}}</strong></div>
+                            <div class="caption">To: <strong class="text-brand">₸ {{price($this->max)}}</strong></div>
                         </div>
                     </div>
                 </div>
-                <h5 class="section-title style-1 mb-30 mt-10" style="margin-top:70px !important">Categorie</h5>
+                <h5 class="section-title style-1 mb-30 mt-10" style="margin-top:70px !important">Categories</h5>
                 <ul class="list-group" id="categories">
                     @foreach($uniqueCategories as $parentCategory)
                         @if($parentCategory->parent_id == null)
@@ -119,27 +119,11 @@
                                 <li>
                                     <a wire:click.prevent="sortBy('item_name')"
                                        class="{{ $sortColumnName === 'item_name' && $sortDirection === 'asc' ? '' : 'text-muted' }}">
-                                        Nome A-Z &uparrow;</a>
+                                        Name A-Z &uparrow;</a>
                                 </li>
                                 <li><a wire:click.prevent="sortBy('item_name')"
-                                       class="{{ $sortColumnName === 'item_name' && $sortDirection === 'desc' ? '' : 'text-muted' }}">Nome
+                                       class="{{ $sortColumnName === 'item_name' && $sortDirection === 'desc' ? '' : 'text-muted' }}">Name
                                         Z-A
-                                        &downarrow;</a></li>
-                                <li><a wire:click.prevent="sortBy('price')"
-                                       class="{{ $sortColumnName === 'price' && $sortDirection === 'asc' ? '' : 'text-muted' }}">Prezzo
-                                        Crescente
-                                        &uparrow;</a></li>
-                                <li><a wire:click.prevent="sortBy('price')"
-                                       class="{{ $sortColumnName === 'price' && $sortDirection === 'desc' ? '' : 'text-muted' }}">Prezzo
-                                        Descrescente
-                                        &downarrow;</a></li>
-                                <li><a wire:click.prevent="sortBy('updated_at')"
-                                       class="{{ $sortColumnName === 'updated_at' && $sortDirection === 'desc' ? '' : 'text-muted' }}">Meno
-                                        recente
-                                        &uparrow;</a></li>
-                                <li><a wire:click.prevent="sortBy('updated_at')"
-                                       class="{{ $sortColumnName === 'updated_at' && $sortDirection === 'asc' ? '' : 'text-muted' }}">Più
-                                        recente
                                         &downarrow;</a></li>
                             </ul>
                         </div>
@@ -186,12 +170,12 @@
                             </div>
                             <div class="product-content-wrap">
                                 <div class="product-category">
-                                    Categoria: <a
+                                    Category: <a
                                         href="{{ route('categoryPage',['lang'=>app()->getLocale(),productDetails($p->id)['category_id'],  productDetails($p->id)['category_slug']]) }}">
 
                                         <span style="color: #BF8346;">{{ucFirst(productDetails($p->id)['name'])}}</span>
                                     </a><br>
-                                    Codice articolo: {{__($p->item_code)}}
+                                    Code: {{__($p->item_code)}}
                                 </div>
                                 <h2>
                                     <a href="{{ route('shop.show',[ 'lang'=>app()->getLocale(), $p->id,$p->slug]) }}">{{__($p->item_name)}}</a>
@@ -199,18 +183,18 @@
                                 <div class="product-card-bottom">
                                     @if($p->stock_qty >= 0)
                                         <div class="product-price">
-                                            <span>€ {{ priceView($p->price) }}</span>
+                                            <span>₸ {{ priceView($p->price) }}</span>
                                             {{--                                            <span class="old-price">$32.8</span>--}}
                                         </div>
                                         <div class="add-cart">
                                             <a href="{{route('addcart', ['lang'=>app()->getLocale(), $p->id, $p->slug])}}"
                                                class="add"
                                                title="Aggiungi al carrello"><i
-                                                    class="fi-rs-shopping-cart mr-5"></i>Acquista</a>
+                                                    class="fi-rs-shopping-cart mr-5"></i>Buy</a>
                                         </div>
                                     @else
                                         <div class="product-price" hidden>
-                                            <span>€ {{ priceView($p->price) }}</span>
+                                            <span>₸ {{ priceView($p->price) }}</span>
                                             {{--                                            <span class="old-price">$32.8</span>--}}
                                         </div>
                                         <div class="add-cart">

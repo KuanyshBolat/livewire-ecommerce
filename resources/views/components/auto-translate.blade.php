@@ -1,15 +1,15 @@
-@if(app()->getLocale() === 'en')
+@if(app()->getLocale() === 'ru')
     <div id="google_translate_element" style=""></div>
 
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'it',
-                includedLanguages:'en'
+                pageLanguage: 'en',
+                includedLanguages:'ru'
             }, 'google_translate_element');
             setTimeout(function(){
                 var select = document.querySelector('select.goog-te-combo');
-                select.value    = "en";
+                select.value    = "ru";
                 select.dispatchEvent(new Event('change'));
             },1000)
         }

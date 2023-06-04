@@ -10,7 +10,7 @@
                          style="background-image: url('/uploads/slider/slider1.jpg')">
                         <div class="slider-content">
                             <h2 class="display-2 mb-40">
-                                White art sector<br/>
+                                White art sasda<br/>
                                 for generations
                             </h2>
                             <p class="mb-65">Unmissable offers designed for you</p>
@@ -133,7 +133,7 @@
                                         <div class="product-card-bottom">
                                             @if($p->shippable == false)
                                                 <div class="product-price" hidden>
-                                                    <span>€ {{ priceView($p->price) }}</span>
+                                                    <span>₸ {{ priceView($p->price) }}</span>
                                                     {{--                                            <span class="old-price">$32.8</span>--}}
                                                 </div>
                                                 <div class="add-cart">
@@ -144,7 +144,7 @@
                                                 </div>
                                             @else
                                                 <div class="product-price">
-                                                    <span>€ {{ priceView($p->price) }}</span>
+                                                    <span>₸ {{ priceView($p->price) }}</span>
                                                     {{--                                            <span class="old-price">$32.8</span>--}}
                                                 </div>
                                                 <div class="add-cart">

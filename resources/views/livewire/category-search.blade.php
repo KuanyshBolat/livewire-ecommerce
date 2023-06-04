@@ -128,7 +128,7 @@
                                 <div class="product-card-bottom">
                                     @if($p->shippable == false)
                                         <div class="product-price" hidden>
-                                            <span>€ {{ priceView($p->price) }}</span>
+                                            <span>₸ {{ priceView($p->price) }}</span>
                                             {{--                                            <span class="old-price">$32.8</span>--}}
                                         </div>
                                         <div class="add-cart">
@@ -139,7 +139,7 @@
                                         </div>
                                     @else
                                         <div class="product-price">
-                                            <span>€ {{ priceView($p->price) }}</span>
+                                            <span>₸ {{ priceView($p->price) }}</span>
                                             {{--                                            <span class="old-price">$32.8</span>--}}
                                         </div>
                                         <div class="add-cart">

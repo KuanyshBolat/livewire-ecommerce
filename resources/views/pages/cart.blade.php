@@ -61,7 +61,7 @@
                                         </h6>
                                     </td>
                                     <td class="price" data-title="Prezzo">
-                                        <h4 class="text-body">€ {{ priceView($details['price']) }} </h4>
+                                        <h4 class="text-body">₸ {{ priceView($details['price']) }} </h4>
                                     </td>
                                     <td class="text-center detail-info" data-title="Magazzino">
                                         <div class="detail-extralink mr-15">
@@ -85,7 +85,7 @@
                                     </td>
                                     <td class="price" data-title="Prezzo">
                                         <h4 class="text-brand">  <span
-                                                class="amount"> € {{ priceView($details['quantity'] * $details['price'])}}</span>
+                                                class="amount"> ₸ {{ priceView($details['quantity'] * $details['price'])}}</span>
                                         </h4>
                                     </td>
                                     <td class="action text-center" data-title="Rimuovi"><a
@@ -179,7 +179,7 @@
                                         <h6 class="text-muted">Subtotale</h6>
                                     </td>
                                     <td class="cart_total_amount">
-                                        <h4 class="text-brand text-end">€ {{ priceView($total)}}</h4>
+                                        <h4 class="text-brand text-end">₸ {{ priceView($total)}}</h4>
                                     </td>
                                 </tr>
 
@@ -190,7 +190,7 @@
                                     </td>
                                     <td class="cart_total_amount">
                                         <h5 class="text-heading text-end"><span
-                                                class="amount">+ € {{priceView(7.00)}}</span></h5></td>
+                                                class="amount">+ ₸ {{priceView(7.00)}}</span></h5></td>
                                 </tr>
 
                                 @if (session()->has('coupon'))
@@ -199,7 +199,7 @@
                                             <h6 class="text-muted">Coupon</h6>
                                         </td>
                                         <td class="cart_total_amount">
-                                            <h5 class="text-heading text-end"><span class="amount">( - € {{ priceView($discount) }})</span>
+                                            <h5 class="text-heading text-end"><span class="amount">( - ₸ {{ priceView($discount) }})</span>
                                             </h5></td>
                                     </tr>
                                 @endif
@@ -213,7 +213,7 @@
                                         <h6 class="text-muted">Totale</h6>
                                     </td>
                                     <td class="cart_total_amount">
-                                        <h4 class="text-brand text-end">€ {{ priceView($newTotal)}}</h4>
+                                        <h4 class="text-brand text-end">₸ {{ priceView($newTotal)}}</h4>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -288,7 +288,7 @@
     {{--                                            </a>--}}
     {{--                                        </td>--}}
     {{--                                        <td class="product-price"><span--}}
-    {{--                                                    class="amount">€ {{ priceView($details['price']) }}</span></td>--}}
+    {{--                                                    class="amount">₸ {{ priceView($details['price']) }}</span></td>--}}
     {{--                                        <td class="product-quantity">--}}
     {{--                                            <div class="input-group form-control">--}}
     {{--                                                @if(count($details) > 0)--}}
@@ -305,7 +305,7 @@
     {{--                                        </td>--}}
     {{--                                        <td class="product-subtotal">--}}
     {{--                                            <span--}}
-    {{--                                                    class="amount"> € {{ priceView($details['quantity'] * $details['price'])}}</span>--}}
+    {{--                                                    class="amount"> ₸ {{ priceView($details['quantity'] * $details['price'])}}</span>--}}
     {{--                                        </td>--}}
 
     {{--                                    </tr>--}}
@@ -377,12 +377,12 @@
     {{--                                        <h3 class="cart-title text-uppercase">Totale Carrello</h3>--}}
     {{--                                        <div class="cart-subtotal d-flex align-items-center justify-content-between">--}}
     {{--                                            <label class="ls-25">Subtotale</label>--}}
-    {{--                                            <span>€ {{ priceView($total)}}</span>--}}
+    {{--                                            <span>₸ {{ priceView($total)}}</span>--}}
     {{--                                        </div>--}}
     {{--                                        --}}{{--                                        <hr class="divider mb-6">--}}
     {{--                                        --}}{{--                                        <div class="cart-subtotal d-flex align-items-center justify-content-between">--}}
     {{--                                        --}}{{--                                            <label class="ls-25">IVA</label>--}}
-    {{--                                        --}}{{--                                            <span class="amount">+ € {{ priceView(getNumbers()->get('newTax'))}}</span>--}}
+    {{--                                        --}}{{--                                            <span class="amount">+ ₸ {{ priceView(getNumbers()->get('newTax'))}}</span>--}}
     {{--                                        --}}{{--                                        </div>--}}
     {{--                                        @if (session()->has('coupon'))--}}
     {{--                                            <hr class="divider mb-6">--}}
@@ -397,12 +397,12 @@
     {{--                                        <div class="cart-subtotal d-flex align-items-center justify-content-between">--}}
     {{--                                            <label class="ls-25" style="line-height:25px">Spedizione con corriere:--}}
     {{--                                                <br><span style="font-weight:400 !important; padding-top:10px;">Poste Italiane</span></label>--}}
-    {{--                                            <span class="amount">+ € {{priceView(7.00)}}</span>--}}
+    {{--                                            <span class="amount">+ ₸ {{priceView(7.00)}}</span>--}}
     {{--                                        </div>--}}
     {{--                                        <hr class="divider mb-6">--}}
     {{--                                        <div class="order-total d-flex justify-content-between align-items-center">--}}
     {{--                                            <label>Totale </label>--}}
-    {{--                                            <span class="amount ls-50">€ {{ priceView($newTotal)}}</span>--}}
+    {{--                                            <span class="amount ls-50">₸ {{ priceView($newTotal)}}</span>--}}
     {{--                                        </div>--}}
     {{--                                        @if(session('cart'))--}}
     {{--                                            <a href="{{route('checkout', app()->getLocale())}}"--}}

@@ -59,10 +59,10 @@ class CategoryController extends Controller
         $category->parent_id = $request->parent_id;
 
         if ($category->save() ) {
-            return redirect()->route('categories.index', app()->getLocale())->with(['success' => 'Categoria aggiunta con successo.']);
+            return redirect()->route('categories.index', app()->getLocale())->with(['success' => 'Категория успешно добавлена.']);
         }
 
-        return redirect()->route('categories.index', app()->getLocale())->with(['errors' => 'Impossibile aggiungere una categoria.']);
+        return redirect()->route('categories.index', app()->getLocale())->with(['errors' => 'Невозможно добавить категорию.']);
     }
 
     /**

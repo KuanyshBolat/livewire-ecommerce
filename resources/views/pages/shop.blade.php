@@ -11,14 +11,10 @@
 
     <div class="page-header mt-30 mb-50">
         <div class="container">
-            <div class="archive-header" style="background-image: url('/uploads/about/shop.jpg') !important;">
-                <div class="row align-items-center">
+            <div class="archive-header" style="background-image: url('/uploads/about/slider_shop.png') !important; padding: 200px 80px !important">
+                <div class="">
                     <div class="col-xl-3">
-                        <h2 class="mb-15" id="shopTitle">Shop</h2>
-                        <div class="breadcrumb" id="shopTitle">
-                            <a href="{{url('/')}}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Home</a>
-                            <span id="shopTitle">Shop </span>
-                        </div>
+                        <h2 class="mb-15" id="shopTitle">IITU Shop</h2>
                     </div>
                 </div>
             </div>

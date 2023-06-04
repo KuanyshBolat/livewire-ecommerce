@@ -100,7 +100,7 @@
                                             <div class="product-price primary-color float-left">
                                                 @if($product->price > 0)
                                                     <span
-                                                        class="current-price text-brand">€ {{priceView($product->price)}}</span>
+                                                        class="current-price text-brand">₸ {{priceView($product->price)}}</span>
                                                 @endif
                                             </div>
                                         </div>
@@ -109,10 +109,10 @@
                                             <div class="product-price primary-color float-left">
                                                 @if($product->price > 0)
                                                     <span
-                                                        class="current-price text-brand">€ {{priceView($product->price)}}</span>
+                                                        class="current-price text-brand">₸ {{priceView($product->price)}}</span>
                                                 @endif
                                                 {{--                                            <span class="save-price font-md color3 ml-15">26% Off</span>--}}
-                                                {{--                                            <span class="old-price font-md ml-15">€ {{priceView($product->price - 30)}}</span>--}}
+                                                {{--                                            <span class="old-price font-md ml-15">₸ {{priceView($product->price - 30)}}</span>--}}
                                                 {{--                                        </span>--}}
                                             </div>
                                         </div>
@@ -195,7 +195,7 @@
                                                 <button
                                                     onclick="location.href='{{route('addcart', ['lang'=>app()->getLocale(), $product->id])}}';"
                                                     type="button" class="button button-add-to-cart"><i
-                                                        class="fi-rs-shopping-cart"></i>Aggiungi al carrello
+                                                        class="fi-rs-shopping-cart"></i>Add to cart
                                                 </button>
 
                                             @else
@@ -305,9 +305,7 @@
                                                         class="fi-rs-heart"></i></a>
 
                                             @endif
-                                            <a aria-label="Confronta" class="action-btn hover-up"
-                                               href="{{route('addToCompare', ['lang'=>app()->getLocale(), $product->id,$product->slug])}}"><i
-                                                    class="fi-rs-shuffle"></i></a>
+                                            
                                         </div>
                                     </div>
 
@@ -336,10 +334,7 @@
                                 <a class="nav-link active" id="Description-tab" data-bs-toggle="tab"
                                    href="#Description">Descrizione</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="Additional-info-tab" data-bs-toggle="tab"
-                                   href="#Additional-info">Specifiche tecniche</a>
-                            </li>
+                            
 
                         </ul>
                         <div class="tab-content shop_info_tab entry-main-content">
@@ -347,22 +342,7 @@
                                 <div class="">
                                     <p>{!! __($product->short_description)!!}</p>
                                     <p>{!! __($product->long_description)!!}</p>
-                                    <ul class="product-more-infor mt-30">
-                                        <li><span>Type Of Packing</span> Bottle</li>
-                                        <li><span>Color</span> Green, Pink, Powder Blue, Purple</li>
-                                        <li><span>Quantity Per Case</span> 100ml</li>
-                                        <li><span>Ethyl Alcohol</span> 70%</li>
-                                        <li><span>Piece In One</span> Carton</li>
-                                    </ul>
-                                    <hr class="wp-block-separator is-style-dots"/>
-                                    <h4 class="mt-30">Spedizione e Consegna</h4>
-                                    <br class="wp-block-separator is-style-wide"/>
-                                    <p>I prodotti non disponibili in magazzino, verranno spediti entro 10 giorni
-                                        lavorativi.</p>
-                                    <h4 class="mt-30">Resi facili e gratuiti</h4>
-                                    <br class="wp-block-separator is-style-wide"/>
-                                    <p>Garantiamo i nostri prodotti e potresti tornare indietro tutti i tuoi
-                                        soldi quando vuoi in 30 giorni.</p>
+                                    
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="Additional-info">
@@ -447,10 +427,10 @@
                                                        href="{{route('addwishlist', [app()->getLocale(), $c->id])}}"
                                                        tabindex="0"><i
                                                             class="fi-rs-heart"></i></a>
-                                                    <a aria-label="Confronta" class="action-btn small hover-up"
+                                                    /* <a aria-label="Confronta" class="action-btn small hover-up"
                                                        href="{{route('addToCompare', ['lang'=>app()->getLocale(), $c->id,$c->slug])}}"
                                                        tabindex="0"><i
-                                                            class="fi-rs-shuffle"></i></a>
+                                                            class="fi-rs-shuffle"></i></a> */
                                                 </div>
                                                 <div
                                                     class="product-badges product-badges-position product-badges-mrg">
@@ -463,7 +443,7 @@
                                                        tabindex="0">{{$c->item_name}}</a></h2>
 
                                                 <div class="product-price" hidden>
-                                                    <span>€ {{priceView($c->price)}} </span>
+                                                    <span>₸ {{priceView($c->price)}} </span>
                                                     {{--                                                                <span class="old-price">$245.8</span>--}}
                                                 </div>
                                             </div>

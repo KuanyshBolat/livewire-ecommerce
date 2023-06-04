@@ -50,7 +50,7 @@
                                 <td class=" font-sm fw-600 font-heading">Prezzo</td>
                                 @foreach(session('compare') as $id => $details)
                                     <td class="product_price">
-                                        <h4 class="price text-brand">€ {{priceView($details['price'])}}</h4>
+                                        <h4 class="price text-brand">₸ {{priceView($details['price'])}}</h4>
                                     </td>
                                 @endforeach
                             </tr>
